@@ -112,7 +112,7 @@ def drop_privileges(running_uid, running_gid):
     if os.getuid() != 0:
         return
 
-    log.info("Dropping pivs to UID %r GID %r" % (running_uid, running_gid))
+    log.info("Dropping privs to UID %r GID %r" % (running_uid, running_gid))
 
     # Remove group privileges
     os.setgroups([])
